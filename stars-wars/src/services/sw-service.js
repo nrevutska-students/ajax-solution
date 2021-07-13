@@ -1,7 +1,7 @@
-const axios = require('axios').default;
+import axios from "axios";
 export async function getPeople(id){
-    const response=await fetch(`https://swapi.dev/api/people/${id}/`);
-    const data=await response.json();
-    return data;
+    const response=await axios.get(`https://swapi.dev/api/people/${id}/`);
+    //const data=await response.json();
+    return response;
 
 }
