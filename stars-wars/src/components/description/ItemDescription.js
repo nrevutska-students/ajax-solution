@@ -1,9 +1,13 @@
 import "./itemDescription.css"
 
 export default function ItemDescription(props) {//{imgUrl,name,gender,description}
+<<<<<<< HEAD
     let arrayDate=Object.entries(props.data);
     arrayDate.splice(0,1)
 
+=======
+    
+>>>>>>> d93fc0b22e0ecabd120e265aceb68967754348f5
     return (
         <div className="itemDescription">
             <img className="itemImage" src={props.imgUrl}/>
