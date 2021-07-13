@@ -11,7 +11,7 @@ function App() {
    const data=await getPeople(id)
    console.log(data)
    setImgUrl(`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`);
-   setData(data)
+   setData(data.data)
 
   },[id]);
   function nextObj(){
