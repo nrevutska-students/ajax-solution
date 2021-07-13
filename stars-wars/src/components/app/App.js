@@ -1,9 +1,11 @@
-import Header from "../Header.js"
+import Header from "../header/Header.js"
+import Next from "../nextButton/Next.js"
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
      <Header/>
+     <Next/>
       
     </div>
   );

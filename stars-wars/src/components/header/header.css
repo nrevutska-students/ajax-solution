@@ -1,0 +1,16 @@
+.nav{
+    display:flex;
+    
+  
+    
+}
+.nav{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.navItem{
+    list-style: none;
+    margin-left:50px;
+    cursor:pointer;
+}
