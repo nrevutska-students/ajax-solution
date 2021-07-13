@@ -1,0 +1,17 @@
+.itemDescription{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    
+   
+ }
+ .itemImage{
+    width: 300px;
+    height:300px;
+    object-fit: contain;
+ 
+ }
+ .descItem{
+    list-style: none;
+    font-size: 16px;
+ }
