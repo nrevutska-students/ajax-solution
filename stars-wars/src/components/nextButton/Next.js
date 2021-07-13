@@ -1,9 +1,9 @@
-import './next.css'
+import "./next.css";
 
 export default function Next(props) {
-    return (
-        <button onClick={props.next} className="btn">
-           Next 
-        </button>
-    )
+  return (
+    <button onClick={props.next} className="btn">
+      Next
+    </button>
+  );
 }

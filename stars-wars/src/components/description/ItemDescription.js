@@ -1,6 +1,7 @@
 import "./itemDescription.css"
 
 export default function ItemDescription(props) {//{imgUrl,name,gender,description}
+    
     return (
         <div className="itemDescription">
             <img className="itemImage" src={props.imgUrl}/>
