@@ -1,5 +1,4 @@
 import axios from "axios";
-<<<<<<< HEAD
 export async function getPeople(id){
     const response=await axios.get(`https://swapi.dev/api/people/${id}/`);
     //const data=await response.json();
@@ -45,12 +44,3 @@ export async function getData(id,flag){
     }
     
 }
-=======
-
-export async function getPeople(id) {
-  const response = await axios.get(`https://swapi.dev/api/people/${id}/`);
-  //const data=await response.json();
-
-  return response;
-}
->>>>>>> d93fc0b22e0ecabd120e265aceb68967754348f5
