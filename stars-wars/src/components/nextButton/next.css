@@ -5,8 +5,7 @@
   background: #3e3f3f;
 }
 
-.btn:hover
-{
-background-color:#fcfcfc;
-color: black !important;
+.btn:hover {
+  background-color: #fcfcfc;
+  color: black !important;
 }
