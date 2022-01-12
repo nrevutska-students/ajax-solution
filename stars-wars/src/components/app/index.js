@@ -1,6 +1,6 @@
-import Header from "../header/Header.js";
-import Next from "../nextButton/Next.js";
-import ItemDescription from "../description/ItemDescription.js";
+import Header from "../Header";
+import Next from "../NextButton";
+import ItemDescription from "../Description";
 import React, { useState, useEffect } from "react";
 import getData from "../../services/sw-service.js";
 import { getImageUrl, entities } from "../../utils.js";
