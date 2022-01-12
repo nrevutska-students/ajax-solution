@@ -10,4 +10,5 @@
   list-style: none;
   margin-left: 50px;
   cursor: pointer;
+  text-transform:capitalize;
 }

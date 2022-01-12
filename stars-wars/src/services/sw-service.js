@@ -1,42 +1,48 @@
 import axios from "axios";
+import { getDataUrl } from "../utils";
 
-export async function getPeople(id) {
-  const response = await axios.get(`https://swapi.dev/api/people/${id}/`);
-  //const data=await response.json();
+export async function getFormattedPersonInfo(data) {
   return {
-    name: response.data.name,
-    gender: response.data.gender,
-    birth_year: response.data.birth_year,
-    eye_color: response.data.eye_color,
+    name: data.name,
+    gender: data.gender,
+    'birth year': data.birth_year,
+    'eye color': data.eye_color,
   };
 }
-export async function getPlanets(id) {
-  const response = await axios.get(`https://swapi.dev/api/planets/${id}/`);
-  //const data=await response.json();
+
+export async function getFormattedPlanetInfo(data) {
   return {
-    name: response.data.name,
-    population: response.data.population,
-    orbital_period: response.data.orbital_period,
-    diameter: response.data.diameter,
+    name: data.name,
+    population: data.population,
+    'orbital period': data.orbital_period,
+    diameter: data.diameter,
   };
 }
-export async function getStarhips(id) {
-  const response = await axios.get(`https://swapi.dev/api/starships/${id}/`);
-  //const data=await response.json();
+
+export async function getFormattedStarhipInfo(data) {
   return {
-    name: response.data.name,
-    model: response.data.model,
-    manufacturer: response.data.manufacturer,
-    cost_in_credits: response.data.cost_in_credits,
+    name: data.name,
+    model: data.model,
+    manufacturer: data.manufacturer,
+    'cost in credits': data.cost_in_credits,
   };
 }
-export async function getData(id, flag) {
-  switch (flag) {
-    case "characters":
-      return getPeople(id);
-    case "planets":
-      return getPlanets(id);
-    case "starships":
-      return getStarhips(id);
-  }
+
+export default async function getData(entity, id) {
+
+  return axios.get(getDataUrl(entity, id))
+    .then(({ data }) => {
+      switch (entity) {
+        case "characters":          
+          return getFormattedPersonInfo(data);          
+        case "planets":
+          return getFormattedPlanetInfo(data);
+        case "starships":
+          return getFormattedStarhipInfo(data);
+        default:
+          return {}
+      }
+    }).catch(() => {
+      return { name: 'not available' }
+    });  
 }
