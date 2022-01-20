@@ -8,6 +8,7 @@
 ### Task 1
 Create Star Wars database application.
 Use [swapi.dev](https://swapi.dev/) for data and [starwars-visualguide.com](https://starwars-visualguide.com/) for images.
+Alternative for swapi.dev: https://swapi-deno.azurewebsites.net/
 
 Application will show:
 
